@@ -15,66 +15,91 @@
         android:text="@string/register_credit_card"
         android:textColor="@color/white"
         android:textSize="@dimen/main_text"
-        android:layout_marginTop="@dimen/main_text_margintop"
-        android:layout_marginStart="@dimen/main_text_marginstart"
+        android:layout_marginTop="@dimen/register_credit_card_text_margintop"
+        android:layout_marginStart="@dimen/register_credit_card_marginparent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/etCreditCardNumber"
-
+        app:layout_constraintBottom_toTopOf="@id/tilCreditCardNumber"
         />
 
-    <EditText
-        android:id="@+id/etCreditCardNumber"
-        android:layout_width="match_parent"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilCreditCardNumber"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/main_edittext"
         android:hint="Número do Cartão"
-        android:layout_marginTop="39dp"
-        android:layout_marginStart="@dimen/main_text_marginstart"
         android:textColorHint="@color/white"
+        android:layout_marginTop="@dimen/register_credit_card_margintop_big"
+        android:layout_marginStart="@dimen/register_credit_card_marginparent"
+        android:layout_marginEnd="@dimen/register_credit_card_marginparent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvCreditCardTitle"
-        app:layout_constraintBottom_toTopOf="@id/etCreditCardName"/>
+        app:layout_constraintBottom_toTopOf="@id/tilCreditCardName">
 
-    <EditText
-        android:id="@+id/etCreditCardName"
-        android:layout_width="match_parent"
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/EditTextDefault"
+            android:inputType="number"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilCreditCardName"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/main_edittext"
         android:hint="Nome do titular"
-        android:textColorHint="@color/white"
-        android:layout_marginTop="39dp"
-        android:layout_marginStart="@dimen/main_text_marginstart"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etCreditCardNumber"
-        app:layout_constraintBottom_toTopOf="@id/etCreditCardExpiration"/>
+        android:layout_marginTop="@dimen/register_credit_card_margintop_big"
+        app:layout_constraintEnd_toEndOf="@id/tilCreditCardNumber"
+        app:layout_constraintStart_toStartOf="@id/tilCreditCardNumber"
+        app:layout_constraintTop_toBottomOf="@+id/tilCreditCardNumber"
+        app:layout_constraintBottom_toTopOf="@id/tilCreditCardExpiration">
 
-    <EditText
-        android:id="@+id/etCreditCardExpiration"
-         android:layout_width="0dp"
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/EditTextDefault"
+            android:inputType="textPersonName"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilCreditCardExpiration"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="39dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
         android:hint="@string/credit_card_dataexpiracao"
-        android:textColorHint="@color/white"
-        app:layout_constraintEnd_toStartOf="@+id/etCreditCardCvv"
-       app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etCreditCardName" />
+        android:layout_marginTop="@dimen/register_credit_card_margintop_big"
+        app:layout_constraintEnd_toStartOf="@+id/tilCreditCardCvv"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="@id/tilCreditCardName"
+        app:layout_constraintTop_toBottomOf="@+id/tilCreditCardName">
 
-    <EditText
-        android:id="@+id/etCreditCardCvv"
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/EditTextDefault"
+            android:inputType="textPersonName"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilCreditCardCvv"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="@string/credit_card_cvv"
-        android:textColorHint="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/etCreditCardExpiration"
-        app:layout_constraintTop_toTopOf="@+id/etCreditCardExpiration" />
-    
+        app:layout_constraintEnd_toEndOf="@id/tilCreditCardName"
+        app:layout_constraintStart_toEndOf="@+id/tilCreditCardExpiration"
+        app:layout_constraintTop_toTopOf="@+id/tilCreditCardExpiration">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/EditTextDefault"
+            android:inputType="textPersonName"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
     <Button
         android:id="@+id/btCreditCardSave"
         android:layout_width="match_parent"

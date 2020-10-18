@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="main_text">30sp</dimen>
-    <dimen name="main_edittext">16dp</dimen>
     <dimen name="margin_button">12dp</dimen>
+    <dimen name="main_edittext">16dp</dimen>
     <dimen name="textButton_size">18sp</dimen>
-    <dimen name="main_text_margintop">30dp</dimen>
-    <dimen name="main_text_marginstart">20dp</dimen>
+    <dimen name="edittext_size">16sp</dimen>
+    <dimen name="main_text">30sp</dimen>
+    <dimen name="register_credit_card_marginparent">20dp</dimen>
+    <dimen name="register_credit_card_text_margintop">30dp</dimen>
+    <dimen name="register_credit_card_margintop_big">39dp</dimen>
 </resources>
