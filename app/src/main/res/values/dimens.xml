@@ -4,4 +4,6 @@
     <dimen name="main_edittext">16dp</dimen>
     <dimen name="margin_button">12dp</dimen>
     <dimen name="textButton_size">18sp</dimen>
+    <dimen name="main_text_margintop">30dp</dimen>
+    <dimen name="main_text_marginstart">20dp</dimen>
 </resources>
