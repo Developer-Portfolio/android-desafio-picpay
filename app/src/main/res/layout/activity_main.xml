@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    <TextView
+        android:id="@+id/tvCreditCardTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register_credit_card"
+        android:textSize="@dimen/main_text"
+        android:textColor="@color/white"
+    />
+    <EditText
+        android:id="@+id/etCreditCardNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCreditCardTitle"
+        android:hint="Número do Cartão"
+        android:layout_margin="@dimen/main_edittext"
+        android:textColor="@color/white"
+        />
+    <EditText
+        android:id="@+id/etCreditCardName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etCreditCardNumber"
+        android:hint="Nome do titular"
+        android:layout_margin="@dimen/main_edittext"
+        android:textColor="@color/white"
+        />
+    <EditText
+        android:id="@+id/etCreditCardExpiration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etCreditCardName"
+        android:hint="@string/credit_card_dataexpiracao"
+        android:layout_margin="@dimen/main_edittext"
+        android:textColor="@color/white"
+        />
+    <EditText
+        android:id="@+id/etCreditCardCvv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etCreditCardExpiration"
+        android:hint="@string/credit_card_cvv"
+        android:layout_margin="@dimen/main_edittext"
+        android:textColor="@color/white"
+        />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
