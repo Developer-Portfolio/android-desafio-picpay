@@ -5,53 +5,68 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+
+
     <TextView
         android:id="@+id/tvCreditCardTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/main_text"
         android:text="@string/register_credit_card"
-        android:textSize="@dimen/main_text"
         android:textColor="@color/white"
-    />
+        android:textSize="@dimen/main_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/etCreditCardNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tvCreditCardTitle"
-        android:hint="Número do Cartão"
         android:layout_margin="@dimen/main_edittext"
-        android:textColor="@color/white"
-        />
+        android:hint="Número do Cartão"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCreditCardTitle" />
+
     <EditText
         android:id="@+id/etCreditCardName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/etCreditCardNumber"
-        android:hint="Nome do titular"
         android:layout_margin="@dimen/main_edittext"
-        android:textColor="@color/white"
-        />
+        android:hint="Nome do titular"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCreditCardNumber" />
+
     <EditText
         android:id="@+id/etCreditCardExpiration"
-        android:layout_width="match_parent"
+         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/etCreditCardName"
-        android:hint="@string/credit_card_dataexpiracao"
         android:layout_margin="@dimen/main_edittext"
-        android:textColor="@color/white"
-        />
+        android:layout_marginTop="16dp"
+        android:hint="@string/credit_card_dataexpiracao"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/etCreditCardCvv"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCreditCardName" />
+
     <EditText
         android:id="@+id/etCreditCardCvv"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/etCreditCardExpiration"
-        android:hint="@string/credit_card_cvv"
         android:layout_margin="@dimen/main_edittext"
-        android:textColor="@color/white"
-        />
-    </LinearLayout>
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="@string/credit_card_cvv"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/etCreditCardExpiration"
+        app:layout_constraintStart_toEndtOf="@id/etCreditCardExpiration"
+        app:layout_constraintTop_toBottomOf="@+id/etCreditCardName" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
