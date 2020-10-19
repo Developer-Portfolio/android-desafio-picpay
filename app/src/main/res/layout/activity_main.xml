@@ -49,6 +49,7 @@
         app:layout_constraintBottom_toTopOf="@id/tilCreditCardName">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etCreditCardNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/EditTextDefault"
