@@ -9,4 +9,5 @@
     <string name="expiration_mask">##/##</string>
     <string name="cvv_mask">###</string>
     <string name="register_credit_card_button">Cadastrar Cartão</string>
+    <string name="register_credit_card_subtitle">Para fazer pagamentos para outras pessoas você precisa cadastrar um cartão de crédito pessoal.</string>
 </resources>
