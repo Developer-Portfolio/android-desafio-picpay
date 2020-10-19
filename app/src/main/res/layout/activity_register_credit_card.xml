@@ -50,6 +50,7 @@
         style="@style/TitleDefault"/>
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btRegisterCreditCard"
         android:layout_width="0dp"
         style="@style/ButtonDefault"
         android:layout_height="wrap_content"
