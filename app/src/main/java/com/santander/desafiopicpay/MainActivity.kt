@@ -11,6 +11,22 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
        // Log.i('df',"onCreate")
-        etCreditCardNumber.addTextChangedListener(MaskWatcher(etCreditCardNumber,"#### #### #### ####"))
+        initComponents()
+    }
+    private fun initComponents(){
+        etCreditCardNumber.addTextChangedListener(MaskWatcher(etCreditCardNumber,getString(R.string.credit_card_mask)))
+        etCreditCardExpiration.addTextChangedListener(MaskWatcher(etCreditCardExpiration, getString(R.string.expiration_mask)))
+        etCreditCardCvv.addTextChangedListener(MaskWatcher(etCreditCardCvv, getString(R.string.cvv_mask)))
+
+        btCreditCardSave.setOnClickListener {
+            val expirationDate = etCreditCardExpiration.text.toString()
+            val monthYear = expirationDate.split("/")
+
+            if(monthYear.first().toInt() > 12){
+                tilCreditCardExpiration.error="Data de expiração é inválida"
+            } else {
+                tilCreditCardExpiration.isErrorEnabled = false
+            }
+        }
     }
 }
