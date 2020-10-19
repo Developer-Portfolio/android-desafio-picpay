@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageButton
+        android:id="@+id/ivCreditCardBack"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="@dimen/main_edittext"
+        android:layout_marginStart="@dimen/main_edittext"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/ic_keyboard_arrow_left_24px"
+        />
 
     <TextView
         android:id="@+id/tvCreditCardTitle"
@@ -14,21 +24,22 @@
         android:layout_margin="@dimen/main_text"
         android:text="@string/register_credit_card"
         android:textColor="@color/white"
+        android:textStyle="bold"
         android:textSize="@dimen/main_text"
         android:layout_marginTop="@dimen/register_credit_card_text_margintop"
         android:layout_marginStart="@dimen/register_credit_card_marginparent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivCreditCardBack"
         app:layout_constraintBottom_toTopOf="@id/tilCreditCardNumber"
         />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilCreditCardNumber"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        style="@style/TextInputLayoutDefault"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Número do Cartão"
-        android:textColorHint="@color/white"
+        app:helperText="@string/credit_card_number_helper"
         android:layout_marginTop="@dimen/register_credit_card_margintop_big"
         android:layout_marginStart="@dimen/register_credit_card_marginparent"
         android:layout_marginEnd="@dimen/register_credit_card_marginparent"
@@ -46,7 +57,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilCreditCardName"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        style="@style/TextInputLayoutDefault"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Nome do titular"
@@ -66,7 +77,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilCreditCardExpiration"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        style="@style/TextInputLayoutDefault"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="@string/credit_card_dataexpiracao"
@@ -85,7 +96,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilCreditCardCvv"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        style="@style/TextInputLayoutDefault"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="@string/credit_card_cvv"
@@ -100,15 +111,12 @@
             android:inputType="textPersonName"/>
     </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btCreditCardSave"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/textButton_size"
         android:text="@string/credit_card_save"
-        android:textColor="@color/white"
-        android:textAllCaps="false"
-        android:background="@drawable/custom_button"
+        style="@style/ButtonDefault"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"

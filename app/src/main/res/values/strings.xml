@@ -4,4 +4,5 @@
     <string name="credit_card_cvv">CVV</string>
     <string name="credit_card_dataexpiracao">Data de Expiração</string>
     <string name="credit_card_save">Salvar</string>
+    <string name="credit_card_number_helper">Coloque qui o número do seu cartão</string>
 </resources>
