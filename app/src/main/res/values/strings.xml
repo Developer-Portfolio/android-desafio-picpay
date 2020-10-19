@@ -8,4 +8,5 @@
     <string name="credit_card_mask">#### #### #### ####</string>
     <string name="expiration_mask">##/##</string>
     <string name="cvv_mask">###</string>
+    <string name="register_credit_card_button">Cadastrar Cartão</string>
 </resources>

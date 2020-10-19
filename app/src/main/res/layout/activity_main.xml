@@ -13,7 +13,7 @@
         android:layout_height="wrap_content">
 
         <ImageButton
-            android:id="@+id/ivCreditCardBack"
+            android:id="@+id/ibCreditCardBack"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginTop="@dimen/main_edittext"
@@ -35,7 +35,7 @@
             android:layout_marginTop="@dimen/register_credit_card_text_margintop"
             android:layout_marginStart="@dimen/register_credit_card_marginparent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ivCreditCardBack"
+            app:layout_constraintTop_toBottomOf="@id/ibCreditCardBack"
             app:layout_constraintBottom_toTopOf="@id/tilCreditCardNumber"
             />
 
@@ -89,6 +89,7 @@
             android:layout_height="wrap_content"
             android:hint="@string/credit_card_dataexpiracao"
             android:layout_marginTop="@dimen/register_credit_card_margintop_big"
+            android:layout_marginEnd="@dimen/register_credit_card_marginparent"
             app:layout_constraintEnd_toStartOf="@+id/tilCreditCardCvv"
             app:layout_constraintHorizontal_chainStyle="spread"
             app:layout_constraintStart_toStartOf="@id/tilCreditCardName"
@@ -125,7 +126,6 @@
             style="@style/ButtonDefault"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/margin_button"
             android:text="@string/credit_card_save"
             app:layout_constraintVertical_bias="1.0"
             app:layout_constraintBottom_toBottomOf="parent"

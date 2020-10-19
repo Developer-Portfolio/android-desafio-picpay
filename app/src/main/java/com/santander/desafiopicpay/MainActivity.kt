@@ -1,5 +1,6 @@
 package com.santander.desafiopicpay
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -18,7 +19,11 @@ class MainActivity : AppCompatActivity() {
         etCreditCardExpiration.addTextChangedListener(MaskWatcher(etCreditCardExpiration, getString(R.string.expiration_mask)))
         etCreditCardCvv.addTextChangedListener(MaskWatcher(etCreditCardCvv, getString(R.string.cvv_mask)))
 
-        btCreditCardSave.setOnClickListener {
+        /*btCreditCardSave.setOnClickListener {
+            val intent = Intent(this, MainActivity2::class.java)
+            startActivity(intent)
+        }*/
+        /*btCreditCardSave.setOnClickListener {
             val expirationDate = etCreditCardExpiration.text.toString()
             val monthYear = expirationDate.split("/")
 
@@ -27,6 +32,6 @@ class MainActivity : AppCompatActivity() {
             } else {
                 tilCreditCardExpiration.isErrorEnabled = false
             }
-        }
+        }*/
     }
 }
